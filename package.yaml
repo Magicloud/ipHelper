@@ -1,0 +1,37 @@
+name:                ipHelper
+version:             2019.4.10
+github:              "magicloud/ipHelper"
+license:             BSD3
+author:              "Magicloud"
+maintainer:          "magiclouds@gmail.com"
+copyright:           "None"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            tool
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/magicloud/ipHelper#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- regex-with-pcre
+- regex-base
+- monad-par
+
+executables:
+  ipHelper-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -Wall
+    - -rtsopts
+    - -with-rtsopts=-N
+    # - -with-rtsopts=--numa
